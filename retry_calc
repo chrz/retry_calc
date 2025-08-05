@@ -10,7 +10,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
             min-height: 100vh;
         }
         
@@ -49,7 +49,7 @@
             text-align: center;
             margin-bottom: 30px;
             font-size: 2.5em;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #6c757d, #495057);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -71,9 +71,9 @@
         }
         
         .input-field:focus-within {
-            border-color: #667eea;
+            border-color: #6c757d;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+            box-shadow: 0 8px 25px rgba(108, 117, 125, 0.15);
         }
         
         label {
@@ -93,7 +93,7 @@
         }
         
         .calculate-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #6c757d, #495057);
             color: white;
             border: none;
             padding: 15px 40px;
@@ -104,12 +104,12 @@
             transition: all 0.3s ease;
             display: block;
             margin: 0 auto 30px;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
         }
         
         .calculate-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 12px 35px rgba(108, 117, 125, 0.4);
         }
         
         .results {
@@ -120,11 +120,11 @@
         }
         
         .result-card {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
             border-radius: 15px;
             padding: 25px;
             color: white;
-            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3);
+            box-shadow: 0 10px 30px rgba(108, 117, 125, 0.3);
         }
         
         .result-card h3 {
@@ -175,7 +175,7 @@
         
         .retry-num {
             font-weight: bold;
-            color: #667eea;
+            color: #6c757d;
             min-width: 80px;
         }
         
@@ -229,7 +229,7 @@
         
         <button class="calculate-btn" onclick="calculateRetry()">Calculate with Current Parameters</button>
         
-        <button class="calculate-btn" onclick="findOptimal()" style="margin-top: 10px; background: linear-gradient(45deg, #11998e, #38ef7d);">Find Optimal Interval for Target Time</button>
+        <button class="calculate-btn" onclick="findOptimal()" style="margin-top: 10px; background: linear-gradient(45deg, #868e96, #6c757d);">Find Optimal Interval for Target Time</button>
         
         <div class="results" id="results" style="display: none;">
             <div class="result-card">
@@ -341,7 +341,7 @@
             const config = {
                 "ErrorEquals": ["States.ALL"],
                 "IntervalSeconds": intervalSeconds,
-                "MaxAttempts": maxRetries + 1,
+                "MaxAttempts": maxRetries,
                 "BackoffRate": backoffRate,
                 "MaxDelaySeconds": maxDelay
             };
